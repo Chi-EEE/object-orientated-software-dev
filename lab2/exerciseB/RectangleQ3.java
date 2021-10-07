@@ -1,9 +1,9 @@
-public class Rectangle
+public class RectangleQ3
 {
     private int width;
     private int length;
 
-    public Rectangle()
+    public RectangleQ3()
     {
         setWidth(1);
         setLength(1);

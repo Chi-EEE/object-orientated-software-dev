@@ -7,10 +7,10 @@ public class RectangleTest
 {
 	public static void main(String args[]) 
 	{
-		Rectangle rectangleA = new Rectangle();
+		RectangleQ3 rectangleA = new RectangleQ3();
 
-        rectangleA.setLength(5.0);
-        rectangleA.setWidth(10.0);
+        rectangleA.setLength(5);
+        rectangleA.setWidth(10);
         System.out.println(rectangleA.toString());
 
         System.out.println("The area of rectangleA is " + rectangleA.getArea());

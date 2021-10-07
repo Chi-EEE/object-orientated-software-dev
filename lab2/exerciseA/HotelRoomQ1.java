@@ -1,22 +1,17 @@
-public class HotelRoom
+public class HotelRoomQ1
 {
 	private int roomNumber;
     private String roomType;
 
-	public HotelRoom()
+	public HotelRoomQ1()
 	{
 	}
 
-    //Initalise HotelRoom with the values as arguements
-	public HotelRoom(int t_roomNumber, String t_roomType)
+    //Initalise HotelRoom1 with the values as arguments
+	public HotelRoomQ1(int t_roomNumber, String t_roomType)
 	{
 		setRoomNumber(t_roomNumber);
         setRoomType(t_roomType);
-	}
-		
-	public Thermometer(double cel)
-	{
-		setCelsius(cel);
 	}
 
 	public int getRoomNumber()

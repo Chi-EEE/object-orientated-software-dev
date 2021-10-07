@@ -1,4 +1,4 @@
-public class HotelRoom
+public class HotelRoomQ4
 {
 	private int roomNumber;
     private String roomType;
@@ -6,28 +6,23 @@ public class HotelRoom
     private boolean occupied;
     private double rate;
 
-	public HotelRoom()
+	public HotelRoomQ4()
 	{
 	}
 
-    //Initalise HotelRoom with the values as arguements
-	public HotelRoom(int t_roomNumber, String t_roomType)
+    //Initalise HotelRoom4 with the values as arguements
+	public HotelRoomQ4(int t_roomNumber, String t_roomType)
 	{
 		setRoomNumber(t_roomNumber);
         setRoomType(t_roomType);
 	}
 
-	public HotelRoom(int t_roomNumber, String t_roomType, int t_occupied, double t_rate)
+	public HotelRoomQ4(int t_roomNumber, String t_roomType, boolean t_occupied, double t_rate)
 	{
 		setRoomNumber(t_roomNumber);
         setRoomType(t_roomType);
         setOccupied(t_occupied);
         setRate(t_rate);
-	}
-		
-	public Thermometer(double cel)
-	{
-		setCelsius(cel);
 	}
 
 	public int getRoomNumber()
@@ -50,7 +45,6 @@ public class HotelRoom
 		return roomType;
 	}
 
-    // Q2
 	public boolean isOccupied()
 	{
 		return occupied;
@@ -61,7 +55,7 @@ public class HotelRoom
 		occupied = t_occupied;
 	}
 
-	public bool getRate()
+	public double getRate()
 	{
 		return rate;
 	}
