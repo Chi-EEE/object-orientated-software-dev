@@ -6,7 +6,7 @@ public class BankCustomer
     String address;
 
     int accountAmount = 0;
-    SavingsAccount accounts[];
+    SavingsAccount accounts[] = new SavingsAccount[3];
 
     public BankCustomer(String t_name, String t_address)
     {
@@ -14,26 +14,52 @@ public class BankCustomer
         address = t_address;
     }
     
+    /**
+     * Checks if the account owner hasn't reached the maximum account number and 
+     * adds the inputed SavingsAccount to the accounts array
+     * @param account
+     */
     public void addAccount(SavingsAccount account)
     {
-        if (accountAmount < s_totalAccountAmount - 1)
-        accounts[accountAmount] = account;
-        accountAmount++;
+        if (accountAmount < s_totalAccountAmount)
+        {
+            accounts[accountAmount] = account;
+            accountAmount++;
+        }
+        else
+        	System.out.println("Unable to add another savings account to BankAccount: " + getName() + " at " + getAddress());
     }
     
+    public String getName()
+    {
+    	return name;
+    }
+    
+    public String getAddress()
+    {
+    	return address;
+    }
+    
+    /**
+     * Returns the balance of all the savings accounts
+     * @return
+     */
     public int balance()
     {
         int totalBalance = 0;
-        for (int i = 0; i < s_totalAccountAmount - 1; i++)
+        for (int i = 0; i < accountAmount; i++)
         {
             totalBalance += accounts[i].getBalance();
         }
         return totalBalance;
     }
     
+    /**
+     * Prints out all of the account numbers and it's balance
+     */
     public void summary() 
     {
-        for (int i = 0; i < s_totalAccountAmount - 1; i++)
+        for (int i = 0; i < accountAmount; i++)
         {
             System.out.println("The account number of " + accounts[i].getAccountNumber() + " has " + accounts[i].getBalance() + " money.");
         }

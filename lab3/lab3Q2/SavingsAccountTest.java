@@ -1,5 +1,3 @@
-import java.io.Console;
-
 //Driver program to test the SavingsAccount class.
 public class SavingsAccountTest
 {
