@@ -50,6 +50,10 @@ public class RectangleQ3
         return (width * 2 + length * 2);
     }
 
+    /**
+     * Makes a rectangle string with it's width and length and 
+     * prints the string out
+     */
     public void printRectangle()
     {
         String rectangleString = "";
