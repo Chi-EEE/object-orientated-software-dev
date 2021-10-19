@@ -12,6 +12,7 @@ public class SavingsAccountTest
 		saver1.calculateMonthlyInterest();
 		saver2.calculateMonthlyInterest();
 
+		// Check balance and number
 		System.out.println("Saver1's balance: " + saver1.getBalance() + " and their account number is: " + saver1.getAccountNumber());
 		System.out.println("Saver2's balance: " + saver2.getBalance() + " and their account number is: " + saver2.getAccountNumber());
 	}

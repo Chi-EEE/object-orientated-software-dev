@@ -28,6 +28,11 @@ public class SavingsAccount
         savingsBalance += savingsBalance * annualInterestRate / 12.0;
     }
 
+    /**
+     * This function sets the current annual interest rate
+     * into a new annual interest rate 
+     * @param newAnnualInterestRate
+     */
     static public void modifyInterestRate(double newAnnualInterestRate)
     {
         annualInterestRate = newAnnualInterestRate;
