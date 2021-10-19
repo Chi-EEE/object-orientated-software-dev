@@ -59,7 +59,7 @@ public class MyHR
 	 * @param street The street name
 	 * @param city The city name
 	 * @param county The county name
-	 * @param any Any string inputted for some functions
+	 * @param carDescription The car's description
 	 */
 	static private void createEmployeeRecord(EmployeeType type, int roomNumber, String street, String city, String county, String carDescription)
 	{
