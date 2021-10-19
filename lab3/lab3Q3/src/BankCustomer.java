@@ -21,7 +21,7 @@ public class BankCustomer
      */
     public void addAccount(SavingsAccount account)
     {
-        if (accounts.length < s_totalAccountAmount)
+        if (accountAmount < s_totalAccountAmount)
         {
             accounts[accountAmount] = account;
             accountAmount++;
@@ -47,7 +47,7 @@ public class BankCustomer
     public int balance()
     {
         int totalBalance = 0;
-        for (int i = 0; i < accounts.length; i++)
+        for (int i = 0; i < accountAmount; i++)
         {
             totalBalance += accounts[i].getBalance();
         }
@@ -59,7 +59,7 @@ public class BankCustomer
      */
     public void summary() 
     {
-        for (int i = 0; i < accounts.length; i++)
+        for (int i = 0; i < accountAmount; i++)
         {
             System.out.println("The account number of " + accounts[i].getAccountNumber() + " has " + accounts[i].getBalance() + " money.");
         }

@@ -1,24 +1,39 @@
+/**
+ * @author C00261172 Huu Chi Huynh
+ * @date 19/10/2021
+ * @summary 
+ * Employee Class, for handling the employee's details.
+ */
 public class Employee
 {
 	protected static int employeeRecords = 0;
 	protected int officeAmount;
-	protected Office[] currentOffices = new Office[2];
+	protected Office currentOffice;
 	
-	protected int s_employeeNumber;
+	protected int m_employeeNumber;
 	protected Address currentAddress;
 
 	public Employee(Address address)
 	{
 		currentAddress = address;
-		s_employeeNumber = employeeRecords + 100;
+		m_employeeNumber = employeeRecords + 1000;
 		employeeRecords++;
 	}
-	public void setOffice(int officeIndex, Office office)
+	public void setOffice(Office office)
 	{
-		currentOffices[officeIndex] = office;
+		currentOffice = office;
+		officeAmount++;
+	}
+	public int getEmployeeNumber()
+	{
+		return m_employeeNumber;
+	}
+	static public int getEmployeeRecords()
+	{
+		return employeeRecords;
 	}
 	public String toString()
 	{
-		return "Employee Type: Staff. In " + officeAmount + " Office(s). Lives at " + currentAddress.toString() + "." ;
+		return "Employee Number: " + m_employeeNumber + ". Employee Type: Staff. In " + officeAmount + " Office(s). Lives at " + currentAddress.toString() + "." ;
 	}
 }

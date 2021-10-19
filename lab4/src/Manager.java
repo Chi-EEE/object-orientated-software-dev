@@ -1,19 +1,25 @@
+/**
+ * @author C00261172 Huu Chi Huynh
+ * @date 19/10/2021
+ * @summary 
+ * Manager class, Like the employee class but has a car description variable
+ */
 public class Manager extends Employee {
-	private String s_carDescription;
+	private String m_carDescription;
 
 	public Manager(Address address)
 	{
 		super(address);
-		s_carDescription = "";
+		m_carDescription = "null";
 	}
 	
 	public Manager(Address address, String carDescription)
 	{
 		super(address);
-		s_carDescription = carDescription;
+		m_carDescription = carDescription;
 	}
 	public String toString()
 	{
-		return "Employee Type: Manager. In " + officeAmount + " Office(s). Lives at " + currentAddress.toString() + ". Car Description: " + s_carDescription;
+		return "Employee Number: " + m_employeeNumber + ". Employee Type: Manager. In " + officeAmount + " Office(s). Lives at " + currentAddress.toString() + ". Car Description: " + m_carDescription;
 	}
 }
