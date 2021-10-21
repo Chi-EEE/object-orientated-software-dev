@@ -28,6 +28,10 @@ public class Employee
 	{
 		return m_employeeNumber;
 	}
+	/**
+	 * Returns the amount of employee records
+	 * @return
+	 */
 	static public int getEmployeeRecords()
 	{
 		return employeeRecords;

@@ -23,7 +23,7 @@ public class BankTest {
         SavingsAccount saving4 = new SavingsAccount();
         saving4.addCash(1);
 
-        customer1.addAccount(saving4);
+        customer1.addAccount(saving4); // Unable to add account because 3 is max
 
         customer1.summary();
         

@@ -6,8 +6,7 @@
  */
 public class MyHR
 {
-	static private int MAX_EMPLOYEES = 5;
-	static private int MAX_EMPLOYEES_IN_OFFICE = 2;
+	static private final int MAX_EMPLOYEES = 5;
 	
 	static private Employee[] employees = new Employee[5];
 	static private Office[] offices = new Office[3];
@@ -36,20 +35,15 @@ public class MyHR
 	
 	/**
 	 * Assigns an office to the employee
-	 * @param employee The current employee
+	 * @param employee The current employee number (not index)
 	 * @param roomNumber The room number of the office
 	 */
 	static private void assignOffice(int employeeNumber, int roomNumber)
 	{
 		Office currentOffice = offices[roomNumber - 100];
-
-		if (currentOffice.getEmployeeAmount() >= MAX_EMPLOYEES_IN_OFFICE)
-		{
-			System.out.println("Unable to assign employee " + employeeNumber + " to Room number: " + roomNumber);
-			return;
-		}
-		employees[employeeNumber - 1000].setOffice(currentOffice);
-		currentOffice.increaseEmployeeAmount();
+		Employee currentEmployee = employees[employeeNumber - 1000];
+		currentEmployee.setOffice(currentOffice);
+		currentOffice.addEmployee(currentEmployee);
 	}
 	
 	/**
@@ -69,6 +63,7 @@ public class MyHR
 			return;
 		}
 		Address employeeAddress = new Address(street, city, county);
+		final int employeeIndex = Employee.getEmployeeRecords();
 		switch(type)
 		{
 		case Staff:
@@ -76,16 +71,16 @@ public class MyHR
 			 * Create a class of Employee
 			 */
 			Employee newEmployee = new Employee(employeeAddress);
-			employees[newEmployee.getEmployeeNumber() - 1000] = newEmployee;
-			assignOffice(newEmployee.getEmployeeNumber(), roomNumber);
+			employees[employeeIndex] = newEmployee;
+			assignOffice(employeeIndex + 1000, roomNumber);
 			break;
 		case Manager:
 			/**
 			 * Create a class of Manager
 			 */
 			Manager newManager = new Manager(employeeAddress, carDescription);
-			employees[newManager.getEmployeeNumber() - 1000] = newManager;
-			assignOffice(newManager.getEmployeeNumber(), roomNumber);
+			employees[employeeIndex] = newManager;
+			assignOffice(employeeIndex + 1000, roomNumber);
 			break;
 		default:
 			/**
@@ -116,5 +111,8 @@ public class MyHR
 		listEmployees();
 		listOffices();
 		createEmployeeRecord(EmployeeType.Staff, 101, "Ballyhaught", "Kilmallock", "Limerick", null);
+		System.out.println("There are " + Employee.getEmployeeRecords() + " employee records.");
+		
+		System.out.println(offices[0].getEmployees());
 	}
 }

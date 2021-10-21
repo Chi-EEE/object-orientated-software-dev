@@ -6,9 +6,12 @@
  */
 public class Office
 {
+	static private final int MAX_EMPLOYEES = 2;
 	static private int roomNumbers = 0;
 	private int roomNumber;
 	private int employeeAmount;
+	private Employee[] employees = new Employee[2];
+	
 	public Office()
 	{
 		employeeAmount = 0;
@@ -23,9 +26,27 @@ public class Office
 	{
 		return employeeAmount;
 	}
-	public void increaseEmployeeAmount()
+	public void addEmployee(Employee employee)
 	{
-		employeeAmount++;
+		if (employeeAmount < MAX_EMPLOYEES)
+		{
+			employees[employeeAmount] = employee;
+			employeeAmount++;
+		}
+		else
+		{
+			System.out.println("Unable to assign employee " + employeeAmount + " to Room number: " + roomNumber);
+		}
+	}
+	public String getEmployees()
+	{
+		String employeeString = "The " + employeeAmount + " employee(s) in office: [" + roomNumber + "] are:\n";
+		for (int i = 0; i < MAX_EMPLOYEES; i++)
+		{
+			employeeString += employees[i].toString();
+			employeeString += "\n";
+		}
+		return employeeString;
 	}
 	public String toString()
 	{
