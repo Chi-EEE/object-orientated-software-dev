@@ -33,7 +33,7 @@ public class Student extends Person{
 		}
 		else
 		{
-			System.out.print("Unable to add new course");
+			System.out.print("Unable to add new course to " + this.getName());
 		}
 	}
 	public void printGrades()
