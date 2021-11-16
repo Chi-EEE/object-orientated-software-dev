@@ -1,7 +1,8 @@
-public class Animal {
+public abstract class Animal {
 	private String name;
 	private int age;
 	private char gender;
+	private boolean sleep;
 	
 	public Animal(String name, int age, char gender)
 	{
@@ -33,19 +34,23 @@ public class Animal {
 	public void setGender(char gender) {
 		this.gender = gender;
 	}
-	
-	public void eat()
-	{
-		
+
+	public boolean isAsleep() {
+		return sleep;
+	}
+
+	public void sleep() {
+		System.out.println(getName() + " has fallen asleep.");
+		this.sleep = true;
 	}
 	
-	public void sleep()
-	{
-		
+	public void wake() {
+		System.out.println(getName() + " has waken up.");
+		this.sleep = false;
 	}
 	
-	public void makeSound()
-	{
-		
-	}
+	abstract void eat();
+	
+	abstract void makeSound();
+
 }

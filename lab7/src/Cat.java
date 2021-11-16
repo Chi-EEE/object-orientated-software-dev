@@ -3,4 +3,22 @@ public class Cat extends Animal {
 		super(name, age, gender);
 	}
 
+	public void eat() {
+		if (!isAsleep())
+			System.out.println(getName() + " is now eatting cat food.");
+		else
+			System.out.println(getName() + " can't eat while asleep.");
+	}
+
+	public void makeSound() {
+		if (!isAsleep())
+			System.out.println(getName() + ": Meow ~");
+		else
+			System.out.println(getName() + " can't make a sound while asleep.");
+	}
+
+	public String toString()
+	{
+		return "Cat Name: " + getName() + ", Age: " + getAge() + ", Gender: " + getGender() + ", Currently sleeping: " + isAsleep();
+	}
 }

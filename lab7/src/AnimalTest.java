@@ -12,9 +12,14 @@ public class AnimalTest {
 		System.out.println(cat);
 		cat.eat();
 		cat.sleep();
+		cat.wake();
 		cat.makeSound();
 
 		System.out.println();
+		
+		Vet vet = new Vet("John");
+		vet.vaccination(cat);
+		vet.vaccination(dog);
 	}
 
 }
