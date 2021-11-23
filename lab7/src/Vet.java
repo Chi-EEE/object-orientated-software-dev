@@ -1,3 +1,9 @@
+/**
+ * @author C00261172 Huu Chi Huynh
+ * @date 23/11/2021
+ * @summary 
+ * Vet class
+ */
 public class Vet {
 	private String name;
 

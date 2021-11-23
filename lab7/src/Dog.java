@@ -1,3 +1,9 @@
+/**
+ * @author C00261172 Huu Chi Huynh
+ * @date 23/11/2021
+ * @summary 
+ * Dog class, subclass of Animal
+ */
 public class Dog extends Animal{
 	public Dog(String name, int age, char gender) {
 		super(name, age, gender);

@@ -1,3 +1,9 @@
+/**
+ * @author C00261172 Huu Chi Huynh
+ * @date 23/11/2021
+ * @summary 
+ * Animal class
+ */
 public abstract class Animal {
 	private String name;
 	private int age;
