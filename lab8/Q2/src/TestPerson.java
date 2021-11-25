@@ -1,3 +1,10 @@
+/**
+ * @author C00261172 Huu Chi Huynh
+ * @date 25/11/2021
+ * @summary 
+ * This program creates a student class and employee class which are stored
+ * inside of the person class
+ */
 public class TestPerson {
   	public static void main(String args[])
   	{

@@ -19,9 +19,11 @@ public class Cylinder extends ThreeDShape{
 	{
   		return (super.toString() + "\nShape radius = " + this.radius + "\nShape height = " + this.getHeight());
 	}
+	
 	public double getHeight() {
 		return height;
 	}
+	
 	public void setHeight(double height) {
 		this.height = height;
 	}
