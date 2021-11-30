@@ -1,8 +1,13 @@
+/**
+ * @author C00261172 Huu Chi Huynh
+ * @date 30/11/2021
+ * @summary 
+ * This program creates a car class and hgv class and calls their methods "calculateDuty"
+ */
 public class CarTest{
 	
 	public static void main(String args[]){
-		
-Car car1 = new Car();
+		Car car1 = new Car();
 		
 		car1.setWheels(4);
 		car1.setPass(6);
@@ -14,6 +19,7 @@ Car car1 = new Car();
 		System.out.print(" Passengers: " + car1.getPass());
 		System.out.print(" Type: " + car1.getType());
 		System.out.println(" Import Duty Cost: " + car1.calculateDuty());
+		
 		Hgv hgv1 = new Hgv();
 		
 		hgv1.setWheels(6);
