@@ -9,7 +9,6 @@ public class Book extends LibraryItem implements LoanItem {
 		setNumPages(numPages);
 	}
 
-    @Override
 	public double calculatePrice() {
 		return numPages * 0.015;
 	}

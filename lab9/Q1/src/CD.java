@@ -9,7 +9,6 @@ public class CD extends LibraryItem implements LoanItem {
 		setNumTracks(numTracks);
 	}
 
-    @Override
 	public double calculatePrice() {
 		return numTracks * 0.4;
 	}
