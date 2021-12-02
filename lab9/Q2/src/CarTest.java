@@ -16,9 +16,10 @@ public class CarTest{
 
 		System.out.println("Car1: ");
 		System.out.print("Wheels: " + car1.getWheels());
-		System.out.print(" Passengers: " + car1.getPass());
-		System.out.print(" Type: " + car1.getType());
-		System.out.println(" Import Duty Cost: " + car1.calculateDuty());
+		System.out.print(", Passengers: " + car1.getPass());
+		System.out.print(", Type: " + car1.getType());
+		System.out.print(", Vehicle Price: " + car1.getPrice());
+		System.out.println(", Import Duty Cost: " + car1.calculateDuty());
 		
 		Hgv hgv1 = new Hgv();
 		
@@ -29,8 +30,9 @@ public class CarTest{
 
 		System.out.println("Hgv1: ");
 		System.out.print("Wheels: " + hgv1.getWheels());
-		System.out.print(" Passengers: " + hgv1.getPass());
-		System.out.print(" Cargo Size: " + hgv1.getCargo());
-		System.out.println(" Import Duty Cost: " + hgv1.calculateDuty());
+		System.out.print(", Passengers: " + hgv1.getPass());
+		System.out.print(", Cargo Size: " + hgv1.getCargo());
+		System.out.print(", Vehicle Price: " + hgv1.getPrice());
+		System.out.println(", Import Duty Cost: " + hgv1.calculateDuty());
 	}
 }
