@@ -9,14 +9,11 @@ public class GridGUI extends JFrame {
         layout.setAutoCreateGaps(true);
         layout.setAutoCreateContainerGaps(true);
 
-        JLabel SnapToGridLabel = new JLabel("Snap To Grid");
-        JLabel ShowGridLabel = new JLabel("Show Grid");
+        JCheckBox SnapToGridCheckbox = new JCheckBox("Snap To Grid");
+        JCheckBox ShowGridCheckbox = new JCheckBox("Show Grid");
 
-        JCheckBox SnapToGridCheckbox = new JCheckBox();
-        JCheckBox ShowGridCheckbox = new JCheckBox();
-
-        JLabel XLabel = new JLabel("X");
-        JLabel YLabel = new JLabel("X");
+        JLabel XLabel = new JLabel("X:");
+        JLabel YLabel = new JLabel("Y:");
 
         XLabel.setForeground(new Color(99, 101, 156));
         YLabel.setForeground(new Color(99, 101, 156));
@@ -28,13 +25,14 @@ public class GridGUI extends JFrame {
         JButton CancelButton = new JButton("Cancel");
         JButton HelpButton = new JButton("Help");
 
+        OkButton.setSize(145,50);
+        CancelButton.setSize(145,50);
+        HelpButton.setSize(145,50);
+
         GroupLayout.SequentialGroup hGroup = layout.createSequentialGroup();
         hGroup.addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
                         .addComponent(SnapToGridCheckbox)
                         .addComponent(ShowGridCheckbox));
-        hGroup.addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-                .addComponent(SnapToGridLabel)
-                .addComponent(ShowGridLabel));
         hGroup.addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
                 .addComponent(XLabel)
                 .addComponent(YLabel));
@@ -49,18 +47,21 @@ public class GridGUI extends JFrame {
         GroupLayout.SequentialGroup vGroup = layout.createSequentialGroup();
         vGroup.addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                 .addComponent(SnapToGridCheckbox)
-                .addComponent(SnapToGridLabel)
                 .addComponent(XLabel)
                 .addComponent(XTextField)
                 .addComponent(OkButton));
-        vGroup.addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                .addComponent(ShowGridCheckbox)
-                .addComponent(ShowGridLabel)
-                .addComponent(YLabel)
-                .addComponent(YTextField)
-                .addComponent(CancelButton));
-//        vGroup.addComponent(CancelButton);
-        vGroup.addComponent(HelpButton);
+        vGroup.addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                        .addComponent(ShowGridCheckbox)
+                        .addComponent(YLabel)
+                        .addComponent(YTextField)
+                        .addComponent(CancelButton))
+                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                        .addComponent(OkButton)
+                        .addComponent(CancelButton)
+                        .addComponent(HelpButton))
+        );
+
 
         layout.setHorizontalGroup(hGroup);
         layout.setVerticalGroup(vGroup);
