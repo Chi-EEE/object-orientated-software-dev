@@ -4,17 +4,17 @@
  */
 
 /**
- *
- * @author C00261172
+ * @author C00261172 Huu Chi Huynh
+ * @date 03/02/2022
+ * @summary
+ * Frame with guis
  */
 public class GridGUI extends javax.swing.JFrame {
 
     /**
      * Creates new form GridGUI
      */
-    public GridGUI() {
-        initComponents();
-    }
+    public GridGUI() { initComponents(); }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -35,6 +35,7 @@ public class GridGUI extends javax.swing.JFrame {
         CancelButton = new javax.swing.JButton();
         HelpButton = new javax.swing.JButton();
 
+        setResizable(false);
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         SnapToGrid.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -161,41 +162,6 @@ public class GridGUI extends javax.swing.JFrame {
 
     private void SnapGridActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
-    }
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(GridGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(GridGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(GridGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(GridGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new GridGUI().setVisible(true);
-            }
-        });
     }
 
     // Variables declaration - do not modify                     
