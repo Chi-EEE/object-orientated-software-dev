@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/object-orientated-software-dev.iml" filepath="$PROJECT_DIR$/.idea/object-orientated-software-dev.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab12.iml" filepath="$PROJECT_DIR$/lab12.iml" />
     </modules>
   </component>
 </project>
