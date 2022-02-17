@@ -25,6 +25,7 @@ public class Printer extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        selectionGroup = new javax.swing.ButtonGroup();
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
@@ -67,10 +68,13 @@ public class Printer extends javax.swing.JFrame {
 
         jLabel2.setText("Print Quality:");
 
+        selectionGroup.add(jRadioButton1);
         jRadioButton1.setText("Selection");
 
+        selectionGroup.add(jRadioButton2);
         jRadioButton2.setText("All");
 
+        selectionGroup.add(jRadioButton3);
         jRadioButton3.setText("Applet");
 
         jCheckBox4.setText("Print to File");
@@ -206,5 +210,6 @@ public class Printer extends javax.swing.JFrame {
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JRadioButton jRadioButton3;
+    private javax.swing.ButtonGroup selectionGroup;
     // End of variables declaration//GEN-END:variables
 }
