@@ -15,13 +15,11 @@ public class VerifyRangeTest {
         Scanner scanner = new Scanner(System.in);
         try {
             System.out.println("Please enter an integer:");
-            int value = scanner.nextInt();
+            int value = Integer.parseInt(scanner.nextLine());
             Verifier.verifyIntRange(value, 1, 100); // Between 1 - 100
-        } catch (MyOutOfRangeException errorException) {
-            System.out.println(errorException);
+        } catch (NumberFormatException | MyOutOfRangeException exception) {
+            System.out.println(exception);
         }
-        System.out.println("Press Any Key To Continue...");
-        scanner.nextLine();
     }
 
 }

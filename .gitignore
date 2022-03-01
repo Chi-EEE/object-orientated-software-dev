@@ -25,3 +25,7 @@ hs_err_pid*
 /lab14/target/
 /lab15/nbproject/private/
 /lab15/build/
+/lab15/question1/nbproject/private/
+/lab15/question2/nbproject/private/
+/lab15/question2/build/
+/lab15/question1/build/
